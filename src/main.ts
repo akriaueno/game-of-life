@@ -9,11 +9,12 @@ function main(param: g.GameMainParameterObject): void {
 		// ここからゲーム内容を記述します
 
 		// 各アセットオブジェクトを取得します
-		const cellGenerator = new CellGenerator(scene);
+		const cellSize = 16;
+		const cellGenerator = new CellGenerator(scene, cellSize, cellSize);
 
-		const BOARD_WIDTH = 50;
-		const BOARD_HEIGHT = 20;
-		const board = new Board(scene, BOARD_WIDTH, BOARD_HEIGHT, cellGenerator);
+		const boardWidth = Math.floor(g.game.width / cellSize);
+		const boardHeight = Math.floor(g.game.height / cellSize);
+		const board = new Board(scene, boardWidth, boardHeight, cellGenerator);
 		scene.append(board);
 		// ここまでゲーム内容を記述します
 	});

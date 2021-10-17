@@ -5,7 +5,7 @@ export class CellGenerator {
 	cellWidth: number;
 	cellHeight: number;
 
-	constructor(scene: g.Scene, cellWidth: number = 32, cellHeight: number = 32) {
+	constructor(scene: g.Scene, cellWidth: number = 16, cellHeight: number = 16) {
 		this.scene = scene;
 		this.cellWidth = cellWidth;
 		this.cellHeight = cellHeight;

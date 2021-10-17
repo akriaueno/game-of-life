@@ -2,6 +2,7 @@ export class Cell extends g.FilledRect {
 	alive: boolean;
 
 	constructor(param: g.FilledRectParameterObject) {
+		console.log(param);
 		super(param);
 		this.alive = g.game.random.generate() >= 0.5;
 		this.onUpdate.add(() => {

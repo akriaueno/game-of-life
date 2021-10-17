@@ -5,12 +5,12 @@ export const uniform = (a: number, b: number): number => {
 	return -a + (b - a) * g.game.random.generate();
 };
 
-export function zip<T, U>(
-	firstCollection: Array<T>,
-	lastCollection: Array<U>
-): Array<[T, U]> {
+export function zip<t, u>(
+	firstCollection: Array<t>,
+	lastCollection: Array<u>
+): Array<[t, u]> {
 	const length = Math.min(firstCollection.length, lastCollection.length);
-	const zipped: Array<[T, U]> = [];
+	const zipped: Array<[t, u]> = [];
 
 	for (let index = 0; index < length; index++) {
 		zipped.push([firstCollection[index], lastCollection[index]]);
