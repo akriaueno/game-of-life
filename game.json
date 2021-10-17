@@ -1,7 +1,7 @@
 {
 	"width": 1280,
 	"height": 720,
-	"fps": 30,
+	"fps": 15,
 	"main": "./script/main.js",
 	"assets": {
 		"player": {
@@ -25,6 +25,26 @@
 		"main": {
 			"type": "script",
 			"path": "script/main.js",
+			"global": true
+		},
+		"utils": {
+			"type": "script",
+			"path": "script/utils.js",
+			"global": true
+		},
+		"cell": {
+			"type": "script",
+			"path": "script/cell.js",
+			"global": true
+		},
+		"board": {
+			"type": "script",
+			"path": "script/board.js",
+			"global": true
+		},
+		"cellGenerator": {
+			"type": "script",
+			"path": "script/cellGenerator.js",
 			"global": true
 		}
 	},
