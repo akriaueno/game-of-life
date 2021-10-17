@@ -17,9 +17,7 @@ exports.Cell = void 0;
 var Cell = /** @class */ (function (_super) {
     __extends(Cell, _super);
     function Cell(param) {
-        var _this = this;
-        console.log(param);
-        _this = _super.call(this, param) || this;
+        var _this = _super.call(this, param) || this;
         _this.alive = g.game.random.generate() >= 0.5;
         _this.onUpdate.add(function () {
             if (_this.alive) {
