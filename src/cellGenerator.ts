@@ -1,20 +1,22 @@
 import { Cell } from "./cell";
 
 export class CellGenerator {
-	scene: g.Scene;
-	cellImageAsset: g.ImageAsset;
+  scene: g.Scene;
+  cellWidth: number;
+  cellHeight: number;
 
-	constructor(scene: g.Scene, cellImageAsset: g.ImageAsset) {
-		this.scene = scene;
-		this.cellImageAsset = cellImageAsset;
-	}
+  constructor(scene: g.Scene, cellWidth = 32, cellHeight = 32) {
+    this.scene = scene;
+    this.cellWidth = cellWidth;
+    this.cellHeight = cellHeight;
+  }
 
-	ganerate(): Cell {
-		return new Cell({
-			scene: this.scene,
-			src: this.cellImageAsset,
-			width: this.cellImageAsset.width,
-			height: this.cellImageAsset.height,
-		});
-	}
+  ganerate(): Cell {
+    return new Cell({
+      scene: this.scene,
+      width: this.cellWidth,
+      height: this.cellHeight,
+      cssColor: "blue",
+    });
+  }
 }
