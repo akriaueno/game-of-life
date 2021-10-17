@@ -42,8 +42,6 @@ var Board = /** @class */ (function (_super) {
         var dis = [0, -1, -1, -1, 0, 1, 1, 1];
         var djs = [1, 1, 0, -1, -1, -1, 0, 1];
         var adjCounts = new Array();
-        if (this === undefined)
-            return;
         utils.range(0, this.height + 2).forEach(function (i) {
             adjCounts[i] = new Array();
             utils.range(0, _this.width + 2).forEach(function (j) {

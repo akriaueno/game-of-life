@@ -8,10 +8,11 @@ function main(param) {
     scene.onLoad.add(function () {
         // ここからゲーム内容を記述します
         // 各アセットオブジェクトを取得します
-        var cellGenerator = new cellGenerator_1.CellGenerator(scene);
-        var BOARD_WIDTH = 50;
-        var BOARD_HEIGHT = 20;
-        var board = new board_1.Board(scene, BOARD_WIDTH, BOARD_HEIGHT, cellGenerator);
+        var cellSize = 16;
+        var cellGenerator = new cellGenerator_1.CellGenerator(scene, cellSize, cellSize);
+        var boardWidth = Math.floor(g.game.width / cellSize);
+        var boardHeight = Math.floor(g.game.height / cellSize);
+        var board = new board_1.Board(scene, boardWidth, boardHeight, cellGenerator);
         scene.append(board);
         // ここまでゲーム内容を記述します
     });

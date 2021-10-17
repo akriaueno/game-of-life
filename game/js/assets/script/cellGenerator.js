@@ -4,8 +4,8 @@ exports.CellGenerator = void 0;
 var cell_1 = require("./cell");
 var CellGenerator = /** @class */ (function () {
     function CellGenerator(scene, cellWidth, cellHeight) {
-        if (cellWidth === void 0) { cellWidth = 32; }
-        if (cellHeight === void 0) { cellHeight = 32; }
+        if (cellWidth === void 0) { cellWidth = 16; }
+        if (cellHeight === void 0) { cellHeight = 16; }
         this.scene = scene;
         this.cellWidth = cellWidth;
         this.cellHeight = cellHeight;
