@@ -4,14 +4,11 @@ import { CellGenerator } from "./cellGenerator";
 function main(param: g.GameMainParameterObject): void {
   const scene = new g.Scene({
     game: g.game,
-    // このシーンで利用するアセットのIDを列挙し、シーンに通知します
-    assetIds: ["player"],
   });
   scene.onLoad.add(() => {
     // ここからゲーム内容を記述します
 
     // 各アセットオブジェクトを取得します
-    const cellImageAsset = scene.asset.getImageById("player");
     const cellGenerator = new CellGenerator(scene);
 
     const BOARD_WIDTH = 50;
