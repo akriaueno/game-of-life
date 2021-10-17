@@ -39,7 +39,6 @@ export class Board extends g.E {
 		const dis = [0, -1, -1, -1, 0, 1, 1, 1];
 		const djs = [1, 1, 0, -1, -1, -1, 0, 1];
 		const adjCounts: Array<Array<number>> = new Array();
-		if (this === undefined) return;
 		utils.range(0, this.height + 2).forEach((i) => {
 			adjCounts[i] = new Array();
 			utils.range(0, this.width + 2).forEach((j) => {
@@ -58,6 +57,7 @@ export class Board extends g.E {
 				}
 			});
 		});
+
 		this.cells.forEach((row, i) => {
 			row.forEach((cell, j) => {
 				const adjCount = adjCounts[i + 1][j + 1];
