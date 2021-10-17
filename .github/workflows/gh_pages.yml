@@ -13,9 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install
         run: |
           npm ci
+
+      - name: Build
+        run: |
+          npm run build
           npm run export-html
 
       - name: Deploy
